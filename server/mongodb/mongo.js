@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const uri = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URL : "localhost:27017"
+const { ServerApiVersion } = require('mongodb');
+const uri = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URL : "mongodb://localhost:27017/chat-app"
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
