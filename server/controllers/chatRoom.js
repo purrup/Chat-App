@@ -78,7 +78,7 @@ module.exports = {
       type: "object",
       properties: {
         sender: { type: "object", nullable: false },
-        receiver: { type: "array", nullable: false },
+        receiver: { type: "string", nullable: false },
         message: { type: "string", nullable: false }
       },
       required: ["sender", "receiver", "message"],
