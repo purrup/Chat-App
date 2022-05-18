@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
-const dbUrl = process.env.MONGODB_URL;
-const dbName = process.env.MONGODB_NAME;
-
-const CONNECTION_URL = `mongodb://${dbUrl}/${dbName}`
-
-mongoose.connect(CONNECTION_URL, {
+const uri = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URL : "localhost:27017"
+mongoose.connect(uri, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1
 })
 
 mongoose.connection.on('connected', () => {
