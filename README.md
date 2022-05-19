@@ -4,7 +4,8 @@
 
 ## preview
 
-![image](https://imgur.com/a/QZxdyqq)
+[Imgur](https://imgur.com/4MTzkiX)
+[Imgur](https://imgur.com/cwWKDKz)
 
 ## Features
 
