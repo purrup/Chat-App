@@ -2,6 +2,14 @@
 
 使用 MERN stack 實作 socket 聊天室
 
+## preview
+
+![image](https://imgur.com/a/QZxdyqq)
+
+## Features
+
+- 使用者創建帳號，設置頭像後，點選其他使用者，即可與對方開啟即時聊天．
+
 ## Live Demos
 
 https://vin-chat-app.herokuapp.com/
