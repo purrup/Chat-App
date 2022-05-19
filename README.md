@@ -4,8 +4,8 @@
 
 ## preview
 
-[Imgur](https://imgur.com/4MTzkiX)
-[Imgur](https://imgur.com/cwWKDKz)
+[Imgur](https://imgur.com/4MTzkiX.jpg)
+[Imgur](https://imgur.com/cwWKDKz.jpg)
 
 ## Features
 
