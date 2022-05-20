@@ -33,6 +33,7 @@ npm start
 
 - [Express](https://expressjs.com/) - Backend Framework
 - [React](https://reactjs.org/) - Frontend Framework
+- [Socket]((https://socket.io/)) - Real-Time Communication Library
 - [Mongoose](https://github.com/Automattic/mongoose/) - ODM for MongoDB
 - [mongoDB Atlas](https://www.mongodb.com/zh-cn/cloud/atlas/) - mongoDB Cloud Service
 - [jwt](https://jwt.io/) - verify user by signed tokens
