@@ -6,6 +6,9 @@ require("ajv-errors")(ajv);
 const UserModel = require('../models/User.js');
 // 雜湊物件
 const bcrypt = require('bcrypt');
+// jwt
+const jwt = require('jsonwebtoken');
+const SECRET_KEY = process.env.SECRET_KEY;
 module.exports = {
   // 建立使用者
   onCreateUser: async (req, res) => {
@@ -20,8 +23,12 @@ module.exports = {
       // 建立使用者的物件
       const user = await UserModel.create({name, email, password});
       delete user.password;
+      // 簽發 token
+      const payload = { userId: user._id };
+      const authToken = jwt.sign(payload, SECRET_KEY);
+      req.authorization = authToken;
       // 回傳執行結果
-      return res.status(200).json({ result: true, user });
+      return res.status(200).json({ result: true, user, auth: req.authorization });
     } catch (error) {
       return res.status(500).json({ result: false, error: error.message })
     }
