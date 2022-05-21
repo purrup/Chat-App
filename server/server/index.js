@@ -24,8 +24,8 @@ app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// 前端打包
-app.use(express.static(path.join(__dirname, 'public')));
+//  部署時使用前端打包檔
+if(process.env.NODE_ENV === 'production') app.use(express.static(path.join(__dirname, 'public')));
 // Route
 app.use("/", indexRouter);
 app.use("/users", userRouter);
