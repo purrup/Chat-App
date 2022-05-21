@@ -1,0 +1,13 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "使用 MERN stack 實作 socket 聊天室",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd server && npm install",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
