@@ -6,7 +6,7 @@ module.exports.encode = async (req, res, next) => {
   try {
     const { name } = req.body;
     const user = await UserModel.find({ name });
-    if(!user) { return res.status(400).json({ result: false , error: `查無使用者：${ name }`}) }
+    if(!user || user.length === 0) { return res.status(400).json({ result: false , error: `查無使用者：${ name }`}) }
     const payload = { userId: user[0]._id };
     const authToken = jwt.sign(payload, SECRET_KEY);
     req.authorization = authToken;
