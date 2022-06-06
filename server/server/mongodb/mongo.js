@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 const { ServerApiVersion } = require('mongodb');
-const uri = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URL : "mongodb://localhost:27017/chat-app"
+const path = require('path');
+const { MONGODB_HOST, MONGODB_PORT, MONGODB_NAME } = require("dotenv").config({path: path.join(__dirname, '../../.env')}).parsed;
+const uri = process.env.NODE_ENV === 'production' ? process.env.MONGODB_URL : `mongodb://${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_NAME}`
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1
+})
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
