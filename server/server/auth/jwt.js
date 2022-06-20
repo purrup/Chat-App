@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+// user model
 const UserModel = require('../models/User.js');
 const SECRET_KEY = process.env.SECRET_KEY;
 // 簽發 Token
